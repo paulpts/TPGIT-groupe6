@@ -4,17 +4,20 @@ import nintendo.model.Adresse;
 import nintendo.model.Boutique;
 import nintendo.model.Client;
 import nintendo.model.Console;
+import nintendo.model.Hybride;
 import nintendo.model.Jeu;
+import nintendo.model.Portable;
+import nintendo.model.Salon;
 
 public class Test {
 
 	public static void main(String[] args) {
 		
-		Console switch1 = new Console("Switch");
-		Console ps5 = new Console("PS5");
-		Console mobile = new Console("Mobile");
-		Console switch2 = new Console("Switch 2");
-		Console n2ds = new Console("2DS");
+		Console switch1 = new Hybride("Switch");
+		Console ps5 = new Salon("PS5");
+		Console mobile = new Portable("Mobile");
+		Console switch2 = new Hybride("Switch 2");
+		Console n2ds = new Portable("2DS");
 		
 		
 		Jeu jeu1 = new Jeu("Pokemon SoulSilver",n2ds);
