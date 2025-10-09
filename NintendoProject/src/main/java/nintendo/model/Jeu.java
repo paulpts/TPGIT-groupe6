@@ -38,8 +38,21 @@ public class Jeu {
 	}
 
 
+	
+		
 
-	@Override
+	public Boutique getBoutique() {
+		return boutique;
+	}
+
+
+
+	public void setBoutique(Boutique boutique) {
+		this.boutique = boutique;
+	}
+
+
+
 	public String toString() {
 		return "Jeu [titre=" + titre + ", console=" + console + "]";
 	}
