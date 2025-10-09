@@ -1,5 +1,6 @@
 package nintendo.test;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,13 +18,14 @@ public class Test {
 
 	public static void main(String[] args) {
 		
-		Console switch1 = new Hybride("Switch");
-		Console ps5 = new Salon("PS5");
-		Console mobile = new Portable("Mobile");
-		Console switch2 = new Hybride("Switch 2");
-		Console n2ds = new Portable("2DS");
+		Console switch1 = new Hybride("Switch",10,LocalDate.now());
+		Console ps5 = new Salon("PS5",10,LocalDate.now());
+		Console mobile = new Portable("Mobile",10,LocalDate.now());
+		Console switch2 = new Hybride("Switch 2",10,LocalDate.now());
+		Console n2ds = new Portable("2DS",10,LocalDate.now());
 		
 		List<Achat> achats = new ArrayList();
+		
 		
 		Adresse adresseBoutique = new Adresse("rue de Paris", "Lille", 50);
 		Boutique boutique = new Boutique("Micromania", adresseBoutique);
@@ -34,9 +36,11 @@ public class Test {
 		Jeu jeu4 = new Jeu("Clash Royale",mobile,boutique);
 		Jeu jeu5 = new Jeu("MarioKart World",switch2,boutique);
 		
+		achats.add(new Achat(jeu1,LocalDate.now(),100));
 		
 		Client client1 = new Client("Plichon", "Mattéo",achats);
 		Client client2 = new Client("Pontois", "Paul",achats);
+
 
 	}
 
