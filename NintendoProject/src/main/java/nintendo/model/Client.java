@@ -1,36 +1,60 @@
 package nintendo.model;
 
+import java.util.List;
+
 public class Client {
 	private String nom;
 	private String prenom;
+	private List<Achat> achats;
 	
 	
 	// Constructeur
-	public Client(String nom, String prenom) {
-		super();
+	
+
+	public Client(String nom, String prenom, List<Achat> achats) {
 		this.nom = nom;
 		this.prenom = prenom;
+		this.achats = achats;
 	}
-	
-	// getters et setters 
+
+
 	public String getNom() {
 		return nom;
 	}
+
+
 	public void setNom(String nom) {
 		this.nom = nom;
 	}
+
+
 	public String getPrenom() {
 		return prenom;
 	}
+
+
 	public void setPrenom(String prenom) {
 		this.prenom = prenom;
 	}
-	
-	// toString
+
+
+	public List<Achat> getAchats() {
+		return achats;
+	}
+
+
+	public void setAchats(List<Achat> achats) {
+		this.achats = achats;
+	}
+
+
 	@Override
 	public String toString() {
-		return "Client [nom=" + nom + ", prenom=" + prenom + "]";
+		return "Client [nom=" + nom + ", prenom=" + prenom + ", achats=" + achats + "]";
 	}
 	
+	
+	
+
 	
 }
